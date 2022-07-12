@@ -10,6 +10,10 @@ import UIKit
 extension UIFont {
     
     static func runicFont() -> UIFont? {
-        return UIFont.init(name: "Runic", size: 44)
+        return UIFont.init(name: "Runic", size: 25)
+    }
+    
+    static func runicAltNoFont() -> UIFont? {
+        return UIFont.init(name: "Runic AltNo", size: 25)
     }
 }

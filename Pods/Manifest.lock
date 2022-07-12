@@ -1,16 +1,20 @@
 PODS:
+  - ShimmerSwift (2.1.1)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - ShimmerSwift
   - SnapKit
 
 SPEC REPOS:
   trunk:
+    - ShimmerSwift
     - SnapKit
 
 SPEC CHECKSUMS:
+  ShimmerSwift: f7ed2daf9c246de8299dfd9e12c6ab465cba9842
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: af68718cfc226812199e021ee031fd83c1bd0e4a
+PODFILE CHECKSUM: c37d9bac86e758d5e4f1ee3ade5e6ee72f45ba14
 
 COCOAPODS: 1.11.2

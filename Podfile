@@ -8,5 +8,6 @@ target 'Pass to Valhalla' do
   # Pods for Pass to Valhalla
 
 pod 'SnapKit'
+pod 'ShimmerSwift'
 
 end

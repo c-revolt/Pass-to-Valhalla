@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         
-        let controller = ViewController()
+        let controller = AuthViewController()
         window?.rootViewController = controller
     }
 
