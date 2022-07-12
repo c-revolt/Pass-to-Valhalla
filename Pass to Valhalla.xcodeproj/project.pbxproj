@@ -17,9 +17,11 @@
 		D091F200287D7E380011143C /* COPYRIGHT.txt in Resources */ = {isa = PBXBuildFile; fileRef = D091F1FD287D7E380011143C /* COPYRIGHT.txt */; };
 		D091F201287D7E380011143C /* Runic AltNo_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D091F1FE287D7E380011143C /* Runic AltNo_0.ttf */; };
 		D091F203287D80BB0011143C /* UIFont Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F202287D80BB0011143C /* UIFont Extention.swift */; };
+		D0DC53DBCE9F0FB70BDC15DF /* Pods_Pass_to_Valhalla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7787E5516D54CCA1F73511 /* Pods_Pass_to_Valhalla.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D97E29C4702A3150C072DF2 /* Pods-Pass to Valhalla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pass to Valhalla.debug.xcconfig"; path = "Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla.debug.xcconfig"; sourceTree = "<group>"; };
 		D091F1E2287D62400011143C /* Pass to Valhalla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pass to Valhalla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D091F1E5287D62400011143C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D091F1E7287D62400011143C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		D091F1FD287D7E380011143C /* COPYRIGHT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT.txt; sourceTree = "<group>"; };
 		D091F1FE287D7E380011143C /* Runic AltNo_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Runic AltNo_0.ttf"; sourceTree = "<group>"; };
 		D091F202287D80BB0011143C /* UIFont Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont Extention.swift"; sourceTree = "<group>"; };
+		DC7787E5516D54CCA1F73511 /* Pods_Pass_to_Valhalla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pass_to_Valhalla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3771184BB44FA7FA99C8F6C /* Pods-Pass to Valhalla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pass to Valhalla.release.xcconfig"; path = "Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DC53DBCE9F0FB70BDC15DF /* Pods_Pass_to_Valhalla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC9B4C3DED686574DD6A8A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC7787E5516D54CCA1F73511 /* Pods_Pass_to_Valhalla.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D091F1D9287D62400011143C = {
 			isa = PBXGroup;
 			children = (
 				D091F1E4287D62400011143C /* Pass to Valhalla */,
 				D091F1E3287D62400011143C /* Products */,
+				D359873E77D6F807705E12FB /* Pods */,
+				1AC9B4C3DED686574DD6A8A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +102,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D359873E77D6F807705E12FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D97E29C4702A3150C072DF2 /* Pods-Pass to Valhalla.debug.xcconfig */,
+				E3771184BB44FA7FA99C8F6C /* Pods-Pass to Valhalla.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D091F1F6287D624A0011143C /* Build configuration list for PBXNativeTarget "Pass to Valhalla" */;
 			buildPhases = (
+				38222EE0185AD6B2BD4C06B2 /* [CP] Check Pods Manifest.lock */,
 				D091F1DE287D62400011143C /* Sources */,
 				D091F1DF287D62400011143C /* Frameworks */,
 				D091F1E0287D62400011143C /* Resources */,
+				C9C9F04B759965D560609A1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38222EE0185AD6B2BD4C06B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pass to Valhalla-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9C9F04B759965D560609A1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D091F1DE287D62400011143C /* Sources */ = {
@@ -298,6 +367,7 @@
 		};
 		D091F1F7287D624A0011143C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D97E29C4702A3150C072DF2 /* Pods-Pass to Valhalla.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +396,7 @@
 		};
 		D091F1F8287D624A0011143C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3771184BB44FA7FA99C8F6C /* Pods-Pass to Valhalla.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
