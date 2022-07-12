@@ -12,6 +12,11 @@
 		D091F1EA287D62400011143C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F1E9287D62400011143C /* ViewController.swift */; };
 		D091F1EF287D624A0011143C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D091F1EE287D624A0011143C /* Assets.xcassets */; };
 		D091F1F2287D624A0011143C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D091F1F0287D624A0011143C /* LaunchScreen.storyboard */; };
+		D091F1FA287D644E0011143C /* UIColor Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F1F9287D644E0011143C /* UIColor Extention.swift */; };
+		D091F1FF287D7E380011143C /* Runic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D091F1FC287D7E380011143C /* Runic.ttf */; };
+		D091F200287D7E380011143C /* COPYRIGHT.txt in Resources */ = {isa = PBXBuildFile; fileRef = D091F1FD287D7E380011143C /* COPYRIGHT.txt */; };
+		D091F201287D7E380011143C /* Runic AltNo_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D091F1FE287D7E380011143C /* Runic AltNo_0.ttf */; };
+		D091F203287D80BB0011143C /* UIFont Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F202287D80BB0011143C /* UIFont Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		D091F1EE287D624A0011143C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D091F1F1287D624A0011143C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D091F1F3287D624A0011143C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D091F1F9287D644E0011143C /* UIColor Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Extention.swift"; sourceTree = "<group>"; };
+		D091F1FC287D7E380011143C /* Runic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Runic.ttf; sourceTree = "<group>"; };
+		D091F1FD287D7E380011143C /* COPYRIGHT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT.txt; sourceTree = "<group>"; };
+		D091F1FE287D7E380011143C /* Runic AltNo_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Runic AltNo_0.ttf"; sourceTree = "<group>"; };
+		D091F202287D80BB0011143C /* UIFont Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +67,24 @@
 				D091F1E5287D62400011143C /* AppDelegate.swift */,
 				D091F1E7287D62400011143C /* SceneDelegate.swift */,
 				D091F1E9287D62400011143C /* ViewController.swift */,
+				D091F1F9287D644E0011143C /* UIColor Extention.swift */,
+				D091F202287D80BB0011143C /* UIFont Extention.swift */,
+				D091F1FB287D7E090011143C /* Fonts */,
 				D091F1EE287D624A0011143C /* Assets.xcassets */,
 				D091F1F0287D624A0011143C /* LaunchScreen.storyboard */,
 				D091F1F3287D624A0011143C /* Info.plist */,
 			);
 			path = "Pass to Valhalla";
+			sourceTree = "<group>";
+		};
+		D091F1FB287D7E090011143C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D091F1FD287D7E380011143C /* COPYRIGHT.txt */,
+				D091F1FE287D7E380011143C /* Runic AltNo_0.ttf */,
+				D091F1FC287D7E380011143C /* Runic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +145,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D091F200287D7E380011143C /* COPYRIGHT.txt in Resources */,
 				D091F1F2287D624A0011143C /* LaunchScreen.storyboard in Resources */,
+				D091F1FF287D7E380011143C /* Runic.ttf in Resources */,
 				D091F1EF287D624A0011143C /* Assets.xcassets in Resources */,
+				D091F201287D7E380011143C /* Runic AltNo_0.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D091F1EA287D62400011143C /* ViewController.swift in Sources */,
+				D091F203287D80BB0011143C /* UIFont Extention.swift in Sources */,
+				D091F1FA287D644E0011143C /* UIColor Extention.swift in Sources */,
 				D091F1E6287D62400011143C /* AppDelegate.swift in Sources */,
 				D091F1E8287D62400011143C /* SceneDelegate.swift in Sources */,
 			);
