@@ -14,7 +14,7 @@ extension UIColor {
     }
     
     static func themeRed() -> UIColor {
-        return #colorLiteral(red: 0.9921568627, green: 0, blue: 0.3294117647, alpha: 1)
+        return #colorLiteral(red: 0.6588235294, green: 0, blue: 0.2196078431, alpha: 1)
     }
     
     static func themeBlack() -> UIColor {

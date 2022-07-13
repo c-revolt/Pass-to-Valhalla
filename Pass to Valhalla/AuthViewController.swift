@@ -32,7 +32,9 @@ class AuthViewController: UIViewController {
     }()
     
     private let shimmeringView: ShimmeringView = {
-        let shimm = ShimmeringView(frame: CGRect(x: 68, y: 760, width: 250, height: 50))
+        let shimm = ShimmeringView()
+        // frame: CGRect(x: 68, y: 760, width: 250, height: 50)
+
         shimm.shimmerSpeed = 100
         
         shimm.isShimmering = true
@@ -89,13 +91,13 @@ extension AuthViewController {
         
         logoImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(80)
-            make.height.width.equalTo(200)
+            make.top.equalToSuperview().inset(60)
+            make.height.width.equalTo(100)
         }
         
         nameLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(20)
-            make.top.equalTo(logoImageView).inset(250)
+            make.top.equalTo(logoImageView).inset(140)
         }
         
         nameTextField.snp.makeConstraints { make in
@@ -126,6 +128,12 @@ extension AuthViewController {
             make.height.equalTo(40)
         }
         
+        shimmeringView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(40)
+            make.height.equalTo(50)
+            make.width.equalTo(250)
+        }
         
     }
 }
