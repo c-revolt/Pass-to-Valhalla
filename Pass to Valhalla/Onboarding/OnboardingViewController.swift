@@ -12,14 +12,69 @@ import ShimmerSwift
 class OnboardingViewController: UIViewController {
 
     // properties
-    private var collectionView: UICollectionView! = nil
-    
-    private let pageControll: UIPageControl = {
-        let pControll = UIPageControl()
-        pControll.pageIndicatorTintColor = .black
-        pControll.tintColor = .darkGray
+    private lazy var firstView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .yellow
         
-        return pControll
+        let label = UILabel()
+        label.text = "Test"
+        label.textColor = .black
+        label.textAlignment = .center
+        
+        view.addSubview(label)
+        label.edgeTo(view: view)
+        
+        return view
+    }()
+    
+    private lazy var secondView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        
+        let label = UILabel()
+        label.text = "Test"
+        label.textColor = .black
+        label.textAlignment = .center
+        
+        view.addSubview(label)
+        label.edgeTo(view: view)
+        
+        return view
+    }()
+    
+    private lazy var thirdView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        
+        let label = UILabel()
+        label.text = "Test"
+        label.textColor = .black
+        label.textAlignment = .center
+        
+        view.addSubview(label)
+        label.edgeTo(view: view)
+        
+        return view
+    }()
+    
+    lazy var views = [firstView, secondView, thirdView]
+    
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.isPagingEnabled = true
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(views.count), height: view.frame.height)
+        
+        for indexOfView in 0..<views.count {
+            scrollView.addSubview(views[indexOfView])
+            views[indexOfView].frame = CGRect(x: view.frame.width * CGFloat(indexOfView),
+                                        y: 0, width: view.frame.width,
+                                        height: view.frame.height)
+        }
+        
+        scrollView.delegate = self
+        
+        return scrollView
     }()
     
     private let shimmeringView: ShimmeringView = {
@@ -51,7 +106,7 @@ class OnboardingViewController: UIViewController {
         shimmeringView.contentView = nextButton
         
         setupSubViews()
-        createCollectionView()
+        
         applyConstraints()
     }
     
@@ -64,40 +119,33 @@ class OnboardingViewController: UIViewController {
 extension OnboardingViewController {
     
     private func setupSubViews() {
-        //view.addSubview(collectionView)
-        view.addSubview(pageControll)
-        view.addSubview(shimmeringView)
-        shimmeringView.addSubview(nextButton)
+        view.addSubview(scrollView)
+        
+//        view.addSubview(shimmeringView)
+//        shimmeringView.addSubview(nextButton)
         
     }
-    
-    private func createCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        //view.addSubview(collectionView)
-        collectionView.backgroundColor = .themeWhite()
-        
-    }
+   
     
     private func applyConstraints() {
         
-//        collectionView.snp.makeConstraints { make in
-//            make.top.left.right.equalToSuperview()
-//            make.bottom.equalTo(pageControll).inset(15)
+
+        scrollView.edgeTo(view: view)
+        
+//        shimmeringView.snp.makeConstraints { make in
+//            make.centerX.equalToSuperview()
+//            make.bottom.equalToSuperview().inset(40)
+//            make.height.equalTo(50)
+//            make.width.equalTo(250)
 //        }
-        
-        pageControll.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(50)
-        }
-        
-        shimmeringView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(40)
-            make.height.equalTo(50)
-            make.width.equalTo(250)
-        }
     }
 }
 
+// MARK: - UIScrollViewDelegate
+extension OnboardingViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+}
 
