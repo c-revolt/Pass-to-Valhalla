@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0372D9B288038E700523FEE /* UIView Extantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0372D9A288038E600523FEE /* UIView Extantion.swift */; };
+		D0372D9D28803D3B00523FEE /* UILabel Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0372D9C28803D3B00523FEE /* UILabel Extention.swift */; };
+		D0372D9F28803DA700523FEE /* UIScrollView Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0372D9E28803DA700523FEE /* UIScrollView Extention.swift */; };
 		D091F1E6287D62400011143C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F1E5287D62400011143C /* AppDelegate.swift */; };
 		D091F1E8287D62400011143C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F1E7287D62400011143C /* SceneDelegate.swift */; };
 		D091F1EA287D62400011143C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F1E9287D62400011143C /* AuthViewController.swift */; };
@@ -21,11 +24,15 @@
 		D091F20A287D883F0011143C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F209287D883F0011143C /* TextField.swift */; };
 		D091F20C287D9BF50011143C /* UISegmentedControl Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F20B287D9BF50011143C /* UISegmentedControl Extention.swift */; };
 		D091F20E287D9DAD0011143C /* GengerSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091F20D287D9DAD0011143C /* GengerSegmented.swift */; };
+		D0D89C87287EA8A500D8B12F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D89C86287EA8A500D8B12F /* OnboardingViewController.swift */; };
 		D0DC53DBCE9F0FB70BDC15DF /* Pods_Pass_to_Valhalla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7787E5516D54CCA1F73511 /* Pods_Pass_to_Valhalla.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D97E29C4702A3150C072DF2 /* Pods-Pass to Valhalla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pass to Valhalla.debug.xcconfig"; path = "Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla.debug.xcconfig"; sourceTree = "<group>"; };
+		D0372D9A288038E600523FEE /* UIView Extantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extantion.swift"; sourceTree = "<group>"; };
+		D0372D9C28803D3B00523FEE /* UILabel Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel Extention.swift"; sourceTree = "<group>"; };
+		D0372D9E28803DA700523FEE /* UIScrollView Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView Extention.swift"; sourceTree = "<group>"; };
 		D091F1E2287D62400011143C /* Pass to Valhalla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pass to Valhalla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D091F1E5287D62400011143C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D091F1E7287D62400011143C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		D091F209287D883F0011143C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		D091F20B287D9BF50011143C /* UISegmentedControl Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl Extention.swift"; sourceTree = "<group>"; };
 		D091F20D287D9DAD0011143C /* GengerSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GengerSegmented.swift; sourceTree = "<group>"; };
+		D0D89C86287EA8A500D8B12F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DC7787E5516D54CCA1F73511 /* Pods_Pass_to_Valhalla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pass_to_Valhalla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3771184BB44FA7FA99C8F6C /* Pods-Pass to Valhalla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pass to Valhalla.release.xcconfig"; path = "Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +99,8 @@
 				D091F1E7287D62400011143C /* SceneDelegate.swift */,
 				D091F1E9287D62400011143C /* AuthViewController.swift */,
 				D091F206287D847D0011143C /* View */,
-				D091F204287D84670011143C /* Extentions */,
+				D0D89C85287EA84A00D8B12F /* Onboarding */,
+				D091F204287D84670011143C /* Helpers */,
 				D091F1FB287D7E090011143C /* Fonts */,
 				D091F1EE287D624A0011143C /* Assets.xcassets */,
 				D091F1F0287D624A0011143C /* LaunchScreen.storyboard */,
@@ -110,19 +119,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		D091F204287D84670011143C /* Extentions */ = {
+		D091F204287D84670011143C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				D091F205287D84740011143C /* UIKit */,
 			);
-			path = Extentions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D091F205287D84740011143C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				D091F1F9287D644E0011143C /* UIColor Extention.swift */,
+				D0372D9A288038E600523FEE /* UIView Extantion.swift */,
 				D091F202287D80BB0011143C /* UIFont Extention.swift */,
+				D0372D9C28803D3B00523FEE /* UILabel Extention.swift */,
+				D0372D9E28803DA700523FEE /* UIScrollView Extention.swift */,
 				D091F20B287D9BF50011143C /* UISegmentedControl Extention.swift */,
 			);
 			path = UIKit;
@@ -136,6 +148,14 @@
 				D091F20D287D9DAD0011143C /* GengerSegmented.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D0D89C85287EA84A00D8B12F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D0D89C86287EA8A500D8B12F /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		D359873E77D6F807705E12FB /* Pods */ = {
@@ -265,13 +285,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D091F1EA287D62400011143C /* AuthViewController.swift in Sources */,
+				D0372D9B288038E700523FEE /* UIView Extantion.swift in Sources */,
 				D091F20E287D9DAD0011143C /* GengerSegmented.swift in Sources */,
 				D091F203287D80BB0011143C /* UIFont Extention.swift in Sources */,
 				D091F1FA287D644E0011143C /* UIColor Extention.swift in Sources */,
 				D091F20A287D883F0011143C /* TextField.swift in Sources */,
+				D0372D9F28803DA700523FEE /* UIScrollView Extention.swift in Sources */,
 				D091F1E6287D62400011143C /* AppDelegate.swift in Sources */,
 				D091F208287D848E0011143C /* StatusLabel.swift in Sources */,
+				D0D89C87287EA8A500D8B12F /* OnboardingViewController.swift in Sources */,
 				D091F20C287D9BF50011143C /* UISegmentedControl Extention.swift in Sources */,
+				D0372D9D28803D3B00523FEE /* UILabel Extention.swift in Sources */,
 				D091F1E8287D62400011143C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
