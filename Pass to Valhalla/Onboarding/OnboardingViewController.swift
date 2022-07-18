@@ -77,6 +77,20 @@ class OnboardingViewController: UIViewController {
         return scrollView
     }()
     
+    private lazy var pageControll: UIPageControl = {
+        let pageControll = UIPageControl()
+        pageControll.numberOfPages = views.count
+        pageControll.currentPage = 0
+        pageControll.addTarget(self, action: #selector(pageControllTapHandler(sender:)), for: .touchUpInside)
+        
+        return pageControll
+    }()
+    
+    @objc
+    func pageControllTapHandler(sender: UIPageControl) {
+        scrollView.scrollTo(horizontalPage: sender.currentPage, animated: true)
+    }
+    
     private let shimmeringView: ShimmeringView = {
         let shimm = ShimmeringView()
         // frame: CGRect(x: 68, y: 760, width: 250, height: 50)
@@ -120,7 +134,7 @@ extension OnboardingViewController {
     
     private func setupSubViews() {
         view.addSubview(scrollView)
-        
+        view.addSubview(pageControll)
 //        view.addSubview(shimmeringView)
 //        shimmeringView.addSubview(nextButton)
         
@@ -131,6 +145,7 @@ extension OnboardingViewController {
         
 
         scrollView.edgeTo(view: view)
+        pageControll.pinTo(view)
         
 //        shimmeringView.snp.makeConstraints { make in
 //            make.centerX.equalToSuperview()
@@ -145,7 +160,8 @@ extension OnboardingViewController {
 extension OnboardingViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+        let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
+        pageControll.currentPage = Int(pageIndex)
     }
 }
 
