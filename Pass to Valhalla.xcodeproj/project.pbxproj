@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D003D8CF28853B21001C6BA1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D003D8CE28853B21001C6BA1 /* Constants.swift */; };
 		D0372D9B288038E700523FEE /* UIView Extantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0372D9A288038E600523FEE /* UIView Extantion.swift */; };
 		D0372D9D28803D3B00523FEE /* UILabel Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0372D9C28803D3B00523FEE /* UILabel Extention.swift */; };
 		D0372D9F28803DA700523FEE /* UIScrollView Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0372D9E28803DA700523FEE /* UIScrollView Extention.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		7D97E29C4702A3150C072DF2 /* Pods-Pass to Valhalla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pass to Valhalla.debug.xcconfig"; path = "Target Support Files/Pods-Pass to Valhalla/Pods-Pass to Valhalla.debug.xcconfig"; sourceTree = "<group>"; };
+		D003D8CE28853B21001C6BA1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0372D9A288038E600523FEE /* UIView Extantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extantion.swift"; sourceTree = "<group>"; };
 		D0372D9C28803D3B00523FEE /* UILabel Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel Extention.swift"; sourceTree = "<group>"; };
 		D0372D9E28803DA700523FEE /* UIScrollView Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView Extention.swift"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D091F205287D84740011143C /* UIKit */,
+				D003D8CE28853B21001C6BA1 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				D091F208287D848E0011143C /* StatusLabel.swift in Sources */,
 				D0D89C87287EA8A500D8B12F /* OnboardingViewController.swift in Sources */,
 				D091F20C287D9BF50011143C /* UISegmentedControl Extention.swift in Sources */,
+				D003D8CF28853B21001C6BA1 /* Constants.swift in Sources */,
 				D0372D9D28803D3B00523FEE /* UILabel Extention.swift in Sources */,
 				D091F1E8287D62400011143C /* SceneDelegate.swift in Sources */,
 			);

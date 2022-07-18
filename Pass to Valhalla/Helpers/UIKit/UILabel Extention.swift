@@ -12,7 +12,8 @@ extension UILabel {
     
     func edgeTo(view: UIView) {
         self.snp.makeConstraints { make in
-            make.top.bottom.left.right.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.left.right.equalToSuperview().inset(20)
         }
     }
 }

@@ -14,12 +14,14 @@ class OnboardingViewController: UIViewController {
     // properties
     private lazy var firstView: UIView = {
         let view = UIView()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .themeWhite()
         
         let label = UILabel()
-        label.text = "Test"
+        label.text = K.viewOneText
+        label.font = UIFont(name: "Runic", size: 33)
         label.textColor = .black
         label.textAlignment = .center
+        label.numberOfLines = 0
         
         view.addSubview(label)
         label.edgeTo(view: view)
@@ -29,13 +31,14 @@ class OnboardingViewController: UIViewController {
     
     private lazy var secondView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .themeWhite()
         
         let label = UILabel()
-        label.text = "Test"
+        label.text = K.viewTwoText
+        label.font = UIFont(name: "Runic", size: 33)
         label.textColor = .black
         label.textAlignment = .center
-        
+        label.numberOfLines = 0
         view.addSubview(label)
         label.edgeTo(view: view)
         
@@ -44,15 +47,33 @@ class OnboardingViewController: UIViewController {
     
     private lazy var thirdView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+        view.backgroundColor = .themeWhite()
         
-        let label = UILabel()
-        label.text = "Test"
-        label.textColor = .black
-        label.textAlignment = .center
         
-        view.addSubview(label)
-        label.edgeTo(view: view)
+        
+//        let shimmeringView = ShimmeringView()
+//        // frame: CGRect(x: 68, y: 760, width: 250, height: 50)
+//
+//        shimmeringView.shimmerSpeed = 100
+//        shimmeringView.isShimmering = true
+//        shimmeringView.center = view.center
+//        view.addSubview(shimmeringView)
+//        shimmeringView.pinTo(view)
+//
+//        let button = UIButton(frame: shimmeringView.bounds)
+//        button.backgroundColor = .themeRed()
+//        button.tintColor = .white
+//        button.setTitle("NEXT", for: .normal)
+//        button.titleLabel?.font = UIFont(name: "Runic AltNo", size: 40)
+//        button.layer.cornerRadius = 10
+//
+//        shimmeringView.addSubview(button)
+//        shimmeringView.snp.makeConstraints { make in
+//            make.centerX.centerY.equalToSuperview()
+//            make.height.equalTo(50)
+//            make.width.equalTo(250)
+//        }
+        
         
         return view
     }()
@@ -82,6 +103,8 @@ class OnboardingViewController: UIViewController {
         pageControll.numberOfPages = views.count
         pageControll.currentPage = 0
         pageControll.addTarget(self, action: #selector(pageControllTapHandler(sender:)), for: .touchUpInside)
+        pageControll.pageIndicatorTintColor = .themeBlack()
+        pageControll.currentPageIndicatorTintColor = .themeRed()
         
         return pageControll
     }()
@@ -109,9 +132,18 @@ class OnboardingViewController: UIViewController {
         button.setTitle("NEXT", for: .normal)
         button.titleLabel?.font = UIFont(name: "Runic AltNo", size: 40)
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(pressedNextButton(sender:)), for: .touchUpInside)
         return button
     }()
     
+    @objc
+    func pressedNextButton(sender: UIButton) {
+        
+        let authCV = AuthViewController()
+
+        authCV.modalPresentationStyle = .fullScreen
+        present(authCV, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,6 +167,7 @@ extension OnboardingViewController {
     private func setupSubViews() {
         view.addSubview(scrollView)
         view.addSubview(pageControll)
+        thirdView.addSubview(shimmeringView)
 //        view.addSubview(shimmeringView)
 //        shimmeringView.addSubview(nextButton)
         
@@ -147,12 +180,11 @@ extension OnboardingViewController {
         scrollView.edgeTo(view: view)
         pageControll.pinTo(view)
         
-//        shimmeringView.snp.makeConstraints { make in
-//            make.centerX.equalToSuperview()
-//            make.bottom.equalToSuperview().inset(40)
-//            make.height.equalTo(50)
-//            make.width.equalTo(250)
-//        }
+        shimmeringView.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalTo(250)
+        }
     }
 }
 
